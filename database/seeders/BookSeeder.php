@@ -9,7 +9,7 @@ class BookSeeder extends Seeder
 {
     public function run(): void
     {
-        $path = database_path('data/books_classics.csv');
+        $path = database_path('data/books.csv');
         $file = fopen($path, 'r');
         $headers = fgetcsv($file);
 

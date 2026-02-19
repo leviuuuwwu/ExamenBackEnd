@@ -10,9 +10,9 @@ return new class extends Migration
     {
         Schema::create('loans', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre_solicitante');
-            $table->timestamp('fecha_prestamo');
-            $table->timestamp('fecha_devolucion')->nullable();
+            $table->string('applicant_name');
+            $table->timestamp('loan_date');
+            $table->timestamp('return_date')->nullable();
             $table->foreignId('book_id')->constrained()->cascadeOnDelete();
             $table->timestamps();
         });
